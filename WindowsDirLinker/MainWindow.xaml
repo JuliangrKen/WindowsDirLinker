@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WindowsDirLinker"
         mc:Ignorable="d"
         Title="WindowsDirLinker" Height="300" Width="500"
-        MinHeight="300" MinWidth="500">
+        MinHeight="300" MinWidth="500"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#202020">
         
         <Grid Margin="20">
@@ -38,18 +39,18 @@
 
                 <Label Content="Папка, в которой будет ложная папка *" Grid.ColumnSpan="2"/>
                 <TextBox Grid.Row="1" Name="PathToCurrentDir" Grid.ColumnSpan="2"/>
-                <Button Grid.Row="1" Grid.Column="3" x:Name="PathToCurrentDirButton" Style="{StaticResource PathButton}"/>
+                <Button Grid.Row="1" Grid.Column="3" x:Name="PathToCurrentDirButton" Style="{StaticResource PathButton}" Click="PathToCurrentDirButton_Click"/>
 
                 <Label Grid.Row="3" Content="Путь до положения ложной папки *" Grid.ColumnSpan="2"/>
                 <TextBox Grid.Row="4" Name="PathToRealDir" Grid.ColumnSpan="2"/>
-                <Button Grid.Row="4" Grid.Column="3" x:Name="PathToRealDirButton" Style="{StaticResource PathButton}"/>
+                <Button Grid.Row="4" Grid.Column="3" x:Name="PathToRealDirButton" Style="{StaticResource PathButton}" Click="PathToRealDirButton_Click"/>
 
                 <Label Grid.Row="6" Content="Имя ложной папки" Grid.ColumnSpan="2"/>
                 <TextBox Grid.Row="7" Name="FakeDirName" Grid.ColumnSpan="2"/>
-                <Button Grid.Row="7" Grid.Column="3" x:Name="FakeDirNameButton" Style="{StaticResource PathButton}"/>
+                <Button Content="По умолч." Grid.Row="7" Grid.Column="3" x:Name="FakeDirNameButton" Style="{StaticResource PathButton}" Click="FakeDirNameButton_Click"/>
             </Grid>
             <Grid Grid.Row="2">
-                <Button Style="{StaticResource ExecuteButton}"/>
+                <Button x:Name="ExecuteButton" Style="{StaticResource ExecuteButton}" Click="ExecuteButton_Click"/>
             </Grid>
         </Grid>
     </Grid>
